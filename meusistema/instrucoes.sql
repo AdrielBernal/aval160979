@@ -1,0 +1,9 @@
+CREATE DATABASE postgres;
+
+CREATE TABLE aluno(
+id SERIAL,
+nome VARCHAR NOT NULL,
+data_nascimento VARCHAR NOT NULL,
+ra VARCHAR NOT NULL,
+PRIMARY KEY (id) 
+);
