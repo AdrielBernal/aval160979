@@ -48,20 +48,20 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new FlowLayout(FlowLayout.LEADING, 5, 5));
 
-		JButton btnContato = new JButton("Contato");
-		btnContato.addActionListener(new ActionListener() {
+		JButton btnAluno = new JButton("Aluno");
+		btnAluno.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				adicionarAbaAluno();
 			}
 		});
-		panel.add(btnContato);
+		panel.add(btnAluno);
 
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
 	}
 
 	protected void adicionarAbaAluno() {
-		JPanel cadastroAluno = new CadastroAluno();
+		JPanel cadastroAluno = new AlunoBase();
 
 		PainelWrapper wrapper = new PainelWrapper();
 		wrapper.setConteudo(cadastroAluno);
@@ -74,7 +74,7 @@ public class TelaPrincipal extends JFrame {
 			}
 		});
 
-		tabbedPane.addTab("Contato", wrapper);
+		tabbedPane.addTab("Aluno", wrapper);
 
 	}
 
